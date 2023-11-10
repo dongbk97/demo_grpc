@@ -8,10 +8,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-
     private Server server;
     private void start() throws IOException {
-        int port = 50051;
+        int port = 50052;
         server = ServerBuilder.forPort(port).addService(new StudentService()).build().start();
 
 

@@ -23,7 +23,7 @@ public class Main {
                 .usePlaintext()
                 .build();
         StudentRequest request = StudentRequest.newBuilder()
-                .setId(1001)
+                .setId(100)
                 .build();
         try {
             Main client = new Main(channel);
