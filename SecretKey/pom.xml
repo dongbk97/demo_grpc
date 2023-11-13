@@ -31,7 +31,11 @@
             <version>1.38</version>
         </dependency>
         <!-- Thanks for using https://jar-download.com -->
-
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.27</version> <!-- Kiểm tra phiên bản mới nhất trên trang web chính thức -->
+        </dependency>
     </dependencies>
   <build>
       <plugins>

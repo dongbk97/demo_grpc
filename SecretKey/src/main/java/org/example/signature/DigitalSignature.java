@@ -21,18 +21,17 @@ public class DigitalSignature {
         Security.addProvider(new BouncyCastleProvider());
 
         try {
-            // Tạo cặp khóa
-            KeyPair keyPair = generateKeyPair();
+
             RSAPrivateKey rsaPrivateKey = ReadKey.readPKCS8PrivateKey(new File("private_key.pem"));
             RSAPublicKey rsaPublicKey = ReadKey.readX509PublicKey(new File("public_key.pem"));
-            // Dữ liệu cần ký
-            String dataToSign = "Hello, World!";
+
+            byte[] signatureRaw = PdfToByteArray.PdfToByteArray("test.pdf");
 
             // Tạo chữ ký điện tử bằng private key
-            byte[] signature = sign(dataToSign.getBytes(), rsaPrivateKey);
+            byte[] signature = sign(signatureRaw, rsaPrivateKey);
 
             // Xác nhận chữ ký bằng public key
-            boolean verified = verify(dataToSign.getBytes(), signature, rsaPublicKey);
+            boolean verified = verify(signatureRaw, signature, rsaPublicKey);
 
             // Hiển thị kết quả
             System.out.println("Chữ ký điện tử đã được xác nhận: " + verified);
