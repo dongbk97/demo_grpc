@@ -16,6 +16,7 @@ public class Main {
     public Main(Channel channel) {
         blockingStub = StudentServiceGrpc.newBlockingStub(channel);
     }
+
     public static void main(String[] args) throws InterruptedException {
 
         String serverAddress = "localhost:50051";
@@ -28,8 +29,8 @@ public class Main {
         try {
             Main client = new Main(channel);
             StudentResponse response = client.blockingStub.getStudent(request);
-            System.out.println("Age: "+response.getAge());
-            System.out.println("Name: "+response.getName());
+            System.out.println("Age: " + response.getAge());
+            System.out.println("Name: " + response.getName());
 
         } finally {
             channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);

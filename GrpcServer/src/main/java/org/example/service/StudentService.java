@@ -3,8 +3,6 @@ package org.example.service;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
-import org.example.Main;
-import org.example.entity.Student;
 import org.example.proto.StudentRequest;
 import org.example.proto.StudentResponse;
 import org.example.proto.StudentServiceGrpc;
@@ -16,7 +14,7 @@ public class StudentService extends StudentServiceGrpc.StudentServiceImplBase {
     public void getStudent(StudentRequest request, StreamObserver<StudentResponse> responseObserver) {
 
         final StudentServiceGrpc.StudentServiceBlockingStub blockingStub;
-        String serverAddress = "216.24.57.253:50052";
+        String serverAddress = "localhost:50052";
         ManagedChannel channel = ManagedChannelBuilder.forTarget(serverAddress)
                 .usePlaintext()
                 .build();

@@ -2,7 +2,7 @@
   <artifact type="jar" name="Grpc_Client_2:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Grpc_Client_2_jar</output-path>
     <root id="archive" name="Grpc_Client_2.jar">
-      <element id="module-output" name="Grpc_Client_2" />
+      <element id="module-output" name="Grpc_Server_2" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/codehaus/mojo/animal-sniffer-annotations/1.23/animal-sniffer-annotations-1.23.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/grpc/grpc-protobuf-lite/1.59.0/grpc-protobuf-lite-1.59.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.59.0/grpc-api-1.59.0.jar" path-in-jar="/" />
